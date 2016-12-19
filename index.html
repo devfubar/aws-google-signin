@@ -23,12 +23,8 @@
     var roleArn = '';
     AWS.config.region = '';
 
-    var googleUserId = null;
-
     function onSignIn(googleUser) {
       var profile = googleUser.getBasicProfile();
-
-      googleUserId = profile.getId();
 
       var sts = new AWS.STS();
       var params = {
